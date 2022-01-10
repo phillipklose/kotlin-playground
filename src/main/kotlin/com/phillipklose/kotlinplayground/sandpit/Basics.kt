@@ -5,20 +5,16 @@ import com.phillipklose.kotlinplayground.sandpit.shapes.Shape
 
 class Basics {
 
-    fun executeAll() {
+    fun execute() {
         sum(5, 10)
         printSum(5, 10)
         variables()
         shapes()
         comments()
         stringTemplates()
-        conditionalExpressionMaxOf(11, 2)
         forLoop()
         whileLoop()
         whenExpressionExamples()
-        ranges()
-        rangesWithLists()
-        iterateOverRange()
         doesCollectionContainObject()
         filterCollectionWithLambdas()
         canReturnNullExamples()
@@ -63,12 +59,6 @@ class Basics {
         println(changedText)
     }
 
-    fun conditionalExpressionMaxOf(a: Int, b: Int): Int {
-        val max = if (a > b) a else b
-        println("MaxOf($a, $b) = $max")
-        return max
-    }
-
     fun forLoop() {
         val toys = listOf("sand shovel", "sand bucket", "sand rakes")
 
@@ -108,44 +98,6 @@ class Basics {
         is Long -> "That is a Long"
         !is String -> "That is not a String"
         else -> "Unknown at the end..."
-    }
-
-    fun ranges() {
-        val min = 1
-        val max = 10
-
-        val number = 7
-        if (number in min..max) {
-            println("number $number is in range [$min, $max]")
-        }
-    }
-
-    fun rangesWithLists() {
-        val list = listOf("a", "b", "c")
-
-        if (-1 !in 0..list.lastIndex) {
-            println("-1 is out of range")
-        }
-        if (list.size !in list.indices) {
-            println("list size is out of valid list indices range, too")
-        }
-    }
-
-    fun iterateOverRange() {
-        println("Range from 1 to 10")
-        for (x in 1..10) {
-            println(x)
-        }
-
-        println("Range from 1 to 10 with step 2")
-        for (x in 1..10 step 2) {
-            println(x)
-        }
-
-        println("Range from 10 to 0 with step 2")
-        for (x in 10 downTo 0 step 2) {
-            println(x)
-        }
     }
 
     fun doesCollectionContainObject() {
